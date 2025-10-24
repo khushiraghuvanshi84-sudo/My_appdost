@@ -85,7 +85,8 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Featured Projects */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="grid lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <div
               key={index}
@@ -133,6 +134,7 @@ const Projects: React.FC = () => {
               </div>
             </div>
           ))}
+          </div>
         </div>
 
         {/* Open Source Projects */}
