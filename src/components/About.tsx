@@ -5,32 +5,32 @@ const About: React.FC = () => {
     {
       icon: '🎨',
       title: 'UI/UX Design Excellence',
-      description: 'Crafting intuitive, user-centric designs that guarantee exceptional user satisfaction and engagement.'
+      description: 'Crafting intuitive, user-centric designs that guarantee exceptional user satisfaction and engagement. We believe great design is invisible—it just works.'
     },
     {
       icon: '💻',
       title: 'Custom Software Development',
-      description: 'Building robust, scalable enterprise solutions tailored to your unique business requirements.'
+      description: 'Building robust, scalable enterprise solutions tailored to your unique business requirements. From concept to deployment, we deliver excellence at every stage.'
     },
     {
       icon: '🌐',
       title: 'Web Application Development',
-      description: 'Creating responsive, high-performance web applications using the latest frameworks and technologies.'
+      description: 'Creating responsive, high-performance web applications using the latest frameworks and technologies. Your digital presence, perfected.'
     },
     {
       icon: '📱',
       title: 'Mobile App Development',
-      description: 'Developing native and cross-platform mobile applications that users love.'
+      description: 'Developing native and cross-platform mobile applications that users love. iOS, Android, or hybrid—we\'ve got you covered.'
     },
     {
       icon: '🔧',
       title: 'Full-Stack Development',
-      description: 'End-to-end development expertise covering frontend elegance, backend power, and cloud infrastructure.'
+      description: 'End-to-end development expertise covering frontend elegance, backend power, database optimization, and cloud infrastructure.'
     },
     {
       icon: '🚀',
       title: 'Digital Transformation Consulting',
-      description: 'Strategic guidance to help businesses navigate their digital journey and modernization.'
+      description: 'Strategic guidance to help businesses navigate their digital journey, from legacy system modernization to cloud migration.'
     }
   ];
 
@@ -62,18 +62,20 @@ const About: React.FC = () => {
           
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
+        {/* Service Cards - Vertical Layout */}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-80 flex flex-col"
+              >
+                <div className="text-5xl mb-6">{feature.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-base text-gray-600 leading-relaxed flex-grow">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Why Choose Us */}
