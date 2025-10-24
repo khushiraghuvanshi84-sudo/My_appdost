@@ -78,52 +78,58 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Why Choose Us */}
-        <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                🌟 Why Choose AppDost?
-              </h3>
-              <div className="space-y-4">
-                {values.map((value, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <span className="text-2xl">{value.icon}</span>
-                    <span className="text-lg text-gray-700 font-medium">{value.text}</span>
-                  </div>
-                ))}
+        {/* Why Choose Us - Horizontal Layout */}
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Why Choose AppDost? Card */}
+            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  🌟 Why Choose AppDost?
+                </h3>
+                <div className="space-y-4">
+                  {values.map((value, index) => (
+                    <div key={index} className="flex items-center space-x-4">
+                      <span className="text-2xl">{value.icon}</span>
+                      <span className="text-lg text-gray-700 font-medium">{value.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">👥 Work Culture & Values</h4>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <span className="text-2xl">🎯</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Innovation First</div>
-                    <div className="text-gray-600">Encouraging creative problem-solving</div>
+
+            {/* Work Culture & Values Card */}
+            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
+                <h4 className="text-3xl font-bold text-gray-900 mb-6">👥 Work Culture & Values</h4>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <span className="text-2xl">🎯</span>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-lg">Innovation First</div>
+                      <div className="text-gray-600 text-base">Encouraging creative problem-solving</div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="text-2xl">🤝</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Collaborative Environment</div>
-                    <div className="text-gray-600">Cross-functional teamwork</div>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-2xl">🤝</span>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-lg">Collaborative Environment</div>
+                      <div className="text-gray-600 text-base">Cross-functional teamwork</div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="text-2xl">📚</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Continuous Learning</div>
-                    <div className="text-gray-600">Regular training & workshops</div>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-2xl">📚</span>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-lg">Continuous Learning</div>
+                      <div className="text-gray-600 text-base">Regular training & workshops</div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="text-2xl">🌱</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Growth Mindset</div>
-                    <div className="text-gray-600">Diverse projects & new technologies</div>
+                  <div className="flex items-start space-x-4">
+                    <span className="text-2xl">🌱</span>
+                    <div>
+                      <div className="font-semibold text-gray-900 text-lg">Growth Mindset</div>
+                      <div className="text-gray-600 text-base">Diverse projects & new technologies</div>
+                    </div>
                   </div>
                 </div>
               </div>
