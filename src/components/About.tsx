@@ -63,11 +63,11 @@ const About: React.FC = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-80 flex flex-col"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-200 flex flex-col"
               >
-                <div className="text-5xl mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-base text-gray-600 leading-relaxed flex-grow">{feature.description}</p>
+                <div className="text-5xl mb-4">{feature.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-lg text-gray-600 leading-relaxed flex-grow">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -77,8 +77,8 @@ const About: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Why Choose AppDost? Card */}
-            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-200 flex flex-col">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 flex-grow">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">
                   🌟 Why Choose AppDost?
                 </h3>
@@ -94,8 +94,8 @@ const About: React.FC = () => {
             </div>
 
             {/* Work Culture & Values Card */}
-            <div className="bg-white rounded-3xl p-8 lg:p-10 shadow-xl">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-200 flex flex-col">
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 flex-grow">
                 <h4 className="text-3xl font-bold text-gray-900 mb-6">👥 Work Culture & Values</h4>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">

@@ -95,15 +95,15 @@ const Careers: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:border-blue-200"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-300 h-300 flex flex-col"
               >
                 <div className="mb-6">
                   {benefit.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-xl text-gray-600 leading-relaxed flex-grow">
                   {benefit.description}
                 </p>
               </div>

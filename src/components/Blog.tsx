@@ -63,61 +63,58 @@ const Blog: React.FC = () => {
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-purple-200"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-110 flex flex-col"
               >
                 {/* Blog Post Thumbnail */}
-                <div className="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="h-32 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center mb-4 rounded-lg">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
                     </svg>
                   </div>
                 </div>
 
-                {/* Blog Post Content */}
-                <div className="p-6">
-                  {/* Category and Reading Time */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19Z" />
-                      </svg>
-                      {post.readingTime}
+                {/* Category and Reading Time */}
+                <div className="flex items-center justify-between mb-3">
+                  <span className="bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">
+                    {post.category}
+                  </span>
+                  <div className="flex items-center text-gray-500 text-base">
+                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19Z" />
+                    </svg>
+                    {post.readingTime}
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  {post.title}
+                </h3>
+
+                {/* Excerpt */}
+                <p className="text-lg text-gray-600 leading-relaxed mb-4 flex-grow line-clamp-3">
+                  {post.excerpt}
+                </p>
+
+                {/* Author and Date */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
+                      <span className="text-white text-sm font-semibold">
+                        {post.authorInitials}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="text-base font-medium text-gray-900">{post.author}</p>
+                      <p className="text-sm text-gray-500">{post.date}</p>
                     </div>
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
-
-                  {/* Excerpt */}
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  {/* Author and Date */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
-                        <span className="text-white text-xs font-semibold">
-                          {post.authorInitials}
-                        </span>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">{post.author}</p>
-                        <p className="text-xs text-gray-500">{post.date}</p>
-                      </div>
-                    </div>
-
-                    {/* Read More Button */}
-                    <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
-                      Read More →
-                    </button>
-                  </div>
+                  {/* Read More Button */}
+                  <button className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-lg text-base font-medium hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                    Read More →
+                  </button>
                 </div>
               </article>
             ))}

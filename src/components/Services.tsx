@@ -4,7 +4,7 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: '📱',
-      title: 'Android App Development',
+      title: ' App Development',
       description: 'Custom Android applications built with the latest technologies to bring your ideas to life.',
       features: ['Native & Hybrid Apps', 'Play Store Deployment', 'Maintenance & Support'],
       color: 'from-green-500 to-blue-500'
@@ -84,27 +84,27 @@ const Services: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
-                {service.icon}
+        <div className="max-w-6xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-110 flex flex-col"
+              >
+                <div className="text-5xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-4 flex-grow">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600 text-base">
+                      <span className="w-3 h-3 bg-blue-500 rounded-full mr-4 flex-shrink-0"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Development Process */}

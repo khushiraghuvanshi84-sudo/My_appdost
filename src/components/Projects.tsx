@@ -56,6 +56,20 @@ const Projects: React.FC = () => {
       tech: ['DialogFlow', 'NLP'],
       icon: '💬',
       link: '#'
+    },
+    {
+      title: 'CloudSync',
+      description: 'Cloud Storage Management Tool - Secure file synchronization and backup solution with real-time collaboration features and advanced encryption.',
+      tech: ['Cloud', 'Security'],
+      icon: '☁️',
+      link: '#'
+    },
+    {
+      title: 'DataViz Pro',
+      description: 'Advanced Data Visualization Platform - Interactive dashboard creation tool for business intelligence and data analytics with real-time updates.',
+      tech: ['Data Science', 'Analytics'],
+      icon: '📊',
+      link: '#'
     }
   ];
 
@@ -90,47 +104,45 @@ const Projects: React.FC = () => {
           {featuredProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-110 flex flex-col"
             >
-              <div className="p-8">
-                <div className="text-6xl mb-4">{project.image}</div>
-                <div className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-4">
-                  {project.category}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
-                <p className="text-gray-600 mb-6">{project.description}</p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <div className="text-5xl mb-4">{project.image}</div>
+              <div className="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                {project.category}
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
+              <p className="text-lg text-gray-600 leading-relaxed flex-grow mb-4">{project.description}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
-                <div className="flex gap-4">
-                  {project.links.playstore && (
-                    <a
-                      href={project.links.playstore}
-                      className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
-                    >
-                      <span>📱</span>
-                      <span>Play Store</span>
-                    </a>
-                  )}
-                  {project.links.website && (
-                    <a
-                      href={project.links.website}
-                      className="flex items-center space-x-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-                    >
-                      <span>🌐</span>
-                      <span>Website</span>
-                    </a>
-                  )}
-                </div>
+              <div className="flex gap-2">
+                {project.links.playstore && (
+                  <a
+                    href={project.links.playstore}
+                    className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors text-base"
+                  >
+                    <span>📱</span>
+                    <span>Play Store</span>
+                  </a>
+                )}
+                {project.links.website && (
+                  <a
+                    href={project.links.website}
+                    className="flex items-center space-x-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors text-base"
+                  >
+                    <span>🌐</span>
+                    <span>Website</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -146,33 +158,35 @@ const Projects: React.FC = () => {
             Explore our contributions to AI, automation, and educational technology
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {openSourceProjects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <div className="text-4xl mb-4">{project.icon}</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h4>
-                <p className="text-gray-600 mb-4 text-sm">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href={project.link}
-                  className="text-blue-600 font-medium hover:text-blue-700 flex items-center"
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {openSourceProjects.map((project, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-200 h-110 flex flex-col"
                 >
-                  View on GitHub →
-                </a>
-              </div>
-            ))}
+                  <div className="text-5xl mb-4">{project.icon}</div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h4>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-4 flex-grow">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.link}
+                    className="text-blue-600 font-medium hover:text-blue-700 flex items-center text-base"
+                  >
+                    View on GitHub →
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
